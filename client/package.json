@@ -1,0 +1,48 @@
+{
+  "name": "fbnmediagroup",
+  "homepage": "fbn-group.com",
+  "version": "1.0.0",
+  "description": "Frontend for Fbn Media Group AS",
+  "main": "index.js",
+  "proxy": "http//fbn-group.com/nicobu",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fredriknico/Fbn-group.git"
+  },
+  "author": "Fredrik Nicolaysen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fredriknico/Fbn-group/issues"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
+    "gh-pages": "^2.2.0",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-transition-group": "^4.3.0",
+    "reactstrap": "^8.4.1",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^2.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
