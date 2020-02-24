@@ -2,13 +2,13 @@
   "name": "fbn-group",
   "version": "1.0.0",
   "description": "fbn group frontend & backend",
-  "main": "app.js",
+  "main": "server.js",
   "proxy": "http//fbn-group.com/nicobu",
   "scripts": {
     "client-install": "cd client && npm install",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
+    "client": "npm start --prefix ../client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "git": "git add -A && git commit -m 'Oppdatert' && git push origin master"
   },

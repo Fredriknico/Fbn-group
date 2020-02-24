@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "description": "Frontend for Fbn Media Group AS",
   "main": "index.js",
-  "proxy": "http//fbn-group.com/nicobu",
+  "proxy": "http://localhost:3000",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
+    "start": "webpack-dev-server --mode development --open --hot --host localhost --port 3000",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d dist"
   },
@@ -20,8 +20,11 @@
     "url": "https://github.com/Fredriknico/Fbn-group/issues"
   },
   "dependencies": {
+    "@babel/runtime": "^7.8.4",
+    "axios": "^0.19.2",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.4.1",
-    "concurrently": "^5.1.0",
     "express": "^4.17.1",
     "gh-pages": "^2.2.0",
     "react": "^16.12.0",
@@ -33,8 +36,10 @@
     "uuid": "^3.4.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.8.3",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^3.4.2",

@@ -1,14 +1,35 @@
 ﻿import React, { Component } from 'react';
+import Additem from '../components/addItem/additem';
 
 class FrontPage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      addItem: false
+    };
+  }
+
+  operation() {
+    this.setState({
+      addItem: true
+    });
+  }
+
   render() {
     return (
       <div>
-        <h1>Sandnessjøen Offshore Service AS</h1>
+        <h1>FRONT PAGE</h1>
         <div>
-          <h3>
-            <a href="/teamsite">TeamSite</a>
-          </h3>
+          <button onClick={() => this.operation()}>Add Item</button>
+          {this.state.addItem ? (
+            <div>
+              {' '}
+              <Additem />
+              <button onClick={() => this.setState({ addItem: false })}>
+                Cancel
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
     );

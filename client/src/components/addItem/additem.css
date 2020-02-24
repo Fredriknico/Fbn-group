@@ -1,0 +1,26 @@
+﻿.addItem {
+  background-color: yellow;
+  width: 200;
+  height: 150;
+  text-align: center;
+}
+.itemContainer {
+  text-align: center;
+}
+.UpdateItemContainer {
+  background-color: #bc8f8f;
+}
+.updateItem {
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+.itemStatus {
+  background-color: red;
+}
+.itemNone {
+  display: none;
+}

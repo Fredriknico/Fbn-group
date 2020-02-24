@@ -2,11 +2,20 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    './src'
+  ],
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'index_bundel.js'
+    filename: 'index_bundel.js',
+    publicPath: '/'
   },
+  devServer: {
+    historyApiFallback: true
+  },
+  externals: ['express'],
   module: {
     rules: [
       {

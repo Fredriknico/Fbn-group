@@ -1,0 +1,8 @@
+﻿.Head {
+  flex: 1;
+  margin: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+}

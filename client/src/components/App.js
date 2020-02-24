@@ -1,27 +1,37 @@
-﻿import React, { Component } from "react";
-import Storage from "./storage/storage";
-import "bootstrap/dist/css/bootstrap.min.css";
-import AppNavbar from "../components/AppNavbar";
-import Header from "../components/heading";
-// import ShoppingList from "../components/ShoppingList";
+﻿import 'babel-polyfill';
+import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Storage from './storage/storage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AppNavbar from './navbar/AppNavbar';
+import Header from './heading/heading';
+import AboutPage from '../views/AboutPage';
+import ContactPage from '../views/ContactPage';
+import FrontPage from '../views/FrontPage';
+import css from './app.css';
 
 class App extends Component {
+  componentDidMount() {
+    fetch('http://localhost:5000/api/all').then(console.log('results'));
+  }
   render() {
     return (
       <div>
         <AppNavbar />
         <Header />
-        <div>
-          <h3>
-            <a href="">Nicobu</a>
-          </h3>
-          <h4>
-            <a href="http://localhost:5000/insertitem">Insert Item</a>
-          </h4>
-          <Storage />
+        <div className="main_window">
+          <Switch>
+            <Route path="/" exact component={FrontPage} />
+            <Route path="/about" component={AboutPage} />
+            <Route path="/contact" component={ContactPage} />
+            <Route component={Notfound} />
+          </Switch>
         </div>
+        <Storage />
       </div>
     );
   }
 }
+const Notfound = () => <h1>Not found</h1>;
+
 export default App;
