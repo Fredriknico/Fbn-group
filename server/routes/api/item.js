@@ -1,5 +1,5 @@
 ﻿const express = require('express');
-const db = require('../../database');
+const db = require('../../database/nicobu');
 const router = express.Router();
 
 // Select storage item

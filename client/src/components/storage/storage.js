@@ -33,12 +33,12 @@ class Storage extends Component {
       .getAttribute('data-key');
     console.log(x);
 
-    // this.setState({
-    //   updateField: true
-    // });
-    // axios.get(`http://localhost:5000/api/item/${key}`).then(res => {
-    //   console.log(res.data);
-    // });
+    this.setState({
+      updateField: true
+    });
+    axios.get(`http://localhost:5000/api/item/${key}`).then(res => {
+      console.log(res.data);
+    });
   }
   render() {
     return (

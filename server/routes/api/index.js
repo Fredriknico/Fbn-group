@@ -6,6 +6,7 @@ const deleteItem = require('./delete');
 const singelItem = require('./item');
 const updateItem = require('./updateitem');
 const createTable = require('./table');
+const invoiceGenerator = require('./invoice_generator');
 
 // GET ALL ITEMS
 api.use('/all', selectAll);
@@ -24,5 +25,8 @@ api.use('/update', updateItem);
 
 // CREATE TABLE
 api.use('/creattable', createTable);
+
+// Invoice_generator
+api.use('/invoice_generator', invoiceGenerator);
 
 module.exports = api;

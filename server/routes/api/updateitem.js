@@ -1,24 +1,20 @@
 ﻿const express = require('express');
-const db = require('../../database');
+const db = require('../../database/nicobu');
 const router = express.Router();
 
 // Update storage item
-router.get('/:id', (req, res) => {
-  let update_item_description = 'Kulepenner';
-  let sql = `UPDATE storage SET itemDescription = '${update_item_description}' WHERE id = ${req.params.id}`;
-  db.query(sql, (err, result) => {
+router.post('/:id', (req, res) => {
+  let sql_item = `UPDATE storage SET itemDescription = '${req.body.itemDescription}' WHERE id = ${req.params.id}`;
+  let sql_quanti = `UPDATE storage SET quantity = '${req.body.quantity}' WHERE id = ${req.params.id}`;
+  db.query(sql_item, (err, result) => {
     if (err) throw err;
-    res.send('Item updatet');
+    res.send(result);
+    console.log(result);
   });
-});
-
-// Update storage item quantity
-router.get('/quantity/:id', (req, res) => {
-  let update_item_quantity = 83;
-  let sql = `UPDATE storage SET quantity = '${update_item_quantity}' WHERE id = ${req.params.id}`;
-  db.query(sql, (err, result) => {
+  db.query(sql_quanti, (err, result) => {
     if (err) throw err;
-    res.send('Item quantity updatet');
+    res.send(result);
+    console.log(result);
   });
 });
 

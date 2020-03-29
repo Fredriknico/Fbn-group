@@ -1,19 +1,18 @@
 ﻿import 'babel-polyfill';
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Storage from './storage/storage';
+import Storage from './components/storage/storage';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AppNavbar from './navbar/AppNavbar';
-import Header from './heading/heading';
-import AboutPage from '../views/AboutPage';
-import ContactPage from '../views/ContactPage';
-import FrontPage from '../views/FrontPage';
+import AppNavbar from './components/navbar/AppNavbar';
+import Header from './components/heading/heading';
+import AboutPage from './views/AboutPage';
+import ContactPage from './views/ContactPage';
+import FrontPage from './views/FrontPage';
 import css from './app.css';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
 class App extends Component {
-  componentDidMount() {
-    fetch('http://localhost:5000/api/all').then(console.log('results'));
-  }
   render() {
     return (
       <div>

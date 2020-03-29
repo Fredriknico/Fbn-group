@@ -1,12 +1,7 @@
 ﻿const express = require('express');
 const router = express.Router();
-const db = require('../../database');
+const db = require('../../database/nicobu');
 const app = express();
-// MIDELWARE
-
-// Insert storage item
-let stock_item = 'testM';
-let stock_item_quantity = 25;
 
 router.post('/', (req, res) => {
   let post = {

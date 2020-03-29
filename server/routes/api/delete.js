@@ -1,6 +1,6 @@
 ﻿const express = require('express');
 const router = express.Router();
-const db = require('../../database');
+const db = require('../../database/nicobu');
 
 // Delete storage item
 router.get('/:id', (req, res) => {
