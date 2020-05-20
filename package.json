@@ -1,0 +1,33 @@
+{
+  "name": "fbn-group",
+  "version": "1.0.0",
+  "description": "fbn group frontend & backend",
+  "main": "server.js",
+  "proxy": "https://fbn-group.com",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ../client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "git": "git add -A && git commit -m 'Oppdatert' && git push origin master"
+  },
+  "author": "Fredrik Nicolaysen",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
+    "jimp": "^0.10.3",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "sharp": "^0.25.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "nodemon": "^2.0.2"
+  }
+}
