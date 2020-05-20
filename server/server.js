@@ -9,6 +9,8 @@ app.use(express.json());
 
 app.use('/', routes);
 
+app.use('/uploads', express.static('uploads'));
+
 // LISTEN
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

@@ -7,10 +7,9 @@ function verifyToken(req, res, next) {
   const bearerHeader = req.headers['authorization'];
 
   if (typeof bearerHeader !== 'undefined') {
-    console.log(bearerHeader);
     const bearer = bearerHeader.split(' ');
     const bearerToken = bearer[1];
-    if (bearerHeader == 'test') {
+    if (bearerHeader == 'pastMigr347') {
       next();
     } else {
       res.sendStatus(403);
