@@ -9,6 +9,8 @@ import "./assets/css/index.css";
 
 // css
 
+// tess
+
 const Notfound = () => <h1>Not found</h1>;
 
 ReactDOM.render(
