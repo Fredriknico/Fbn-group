@@ -23,6 +23,7 @@ function verifyToken(req, res, next) {
 
 // API  MODULE
 router.use('/api', verifyToken, require('./api'));
+
 // router.use('/', require('./frontend'));
 
 module.exports = router;
