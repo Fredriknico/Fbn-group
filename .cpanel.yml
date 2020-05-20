@@ -1,0 +1,7 @@
+﻿---
+deployment:
+  tasks:
+    - export DEPLOYPATHCLIENT=/home/user/public_html/
+    - export DEPLOYPATHSERVER=/home/nicobu/fbngrwes/nicobu
+    - /bin/cp server $DEPLOYPATHSERVER
+    - /bin/cp client/dist $DEPLOYPATHCLIENT
