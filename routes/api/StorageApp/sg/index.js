@@ -1,9 +1,7 @@
 ﻿const express = require('express');
 const router = express.Router();
 
-// API  MODULE
-router.use('/hsb', require('./hsb'));
-
-router.use('/sg', require('./sg'));
+// HSB STORAGE
+router.use('/storage', require('./storage'));
 
 module.exports = router;
