@@ -1,5 +1,6 @@
 ﻿const express = require('express');
 const router = express.Router();
+const app = express();
 const jwt = require('jsonwebtoken');
 
 // Auth
@@ -24,6 +25,8 @@ function verifyToken(req, res, next) {
 // API  MODULE
 router.use('/api', verifyToken, require('./api'));
 
-// router.use('/', require('./frontend'));
+app.get('/', (req, res) => {
+  res.send(require('../public_html/dist/index.html'));
+});
 
 module.exports = router;
