@@ -26,7 +26,7 @@ function verifyToken(req, res, next) {
 router.use('/api', verifyToken, require('./api'));
 
 app.get('/', (req, res) => {
-  res.send(require('../public_html/dist/index.html'));
+  res.send(require('../../public_html/dist/index.html'));
 });
 
 module.exports = router;
