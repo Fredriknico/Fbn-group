@@ -25,8 +25,4 @@ function verifyToken(req, res, next) {
 // API  MODULE
 router.use('/api', verifyToken, require('./api'));
 
-app.get('/', (req, res) => {
-  res.send('testr');
-});
-
 module.exports = router;
