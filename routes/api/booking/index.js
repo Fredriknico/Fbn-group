@@ -1,28 +1,10 @@
 ﻿const express = require('express');
-const api = express.Router();
-const selectAll = require('./all');
-const insertItem = require('./insert');
-const deleteItem = require('./delete');
-const singelItem = require('./item');
-const updateItem = require('./updateitem');
-const uploads = require('./uploads');
+const router = express.Router();
 
-// GET ALL ITEMS
-api.use('/bookings', selectAll);
+// API  MODULE
+router.use('/customers', require('./customers'));
+// router.use('/', require('./frontend'));
 
-// INSERT ITEM
-api.use('/insert', insertItem);
+router.use('/bookings', require('./bookings'));
 
-// DELETE ITEM
-api.use('/delete', deleteItem);
-
-// SELECT ITEM
-api.use('/item', singelItem);
-
-// UPDATE ITEM
-api.use('/update', updateItem);
-
-// IMAGES
-api.use('/uploads', uploads);
-
-module.exports = api;
+module.exports = router;
