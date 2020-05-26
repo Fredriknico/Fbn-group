@@ -2,12 +2,8 @@
 const router = express.Router();
 
 // API  MODULE
-// router.use('/customers', require('./customers'));
+router.use('/customers', require('./customers'));
 
-// router.use('/bookings', require('./bookings'));
-
-app.get('/', (req, res) => {
-  res.send('An alligator approaches!');
-});
+router.use('/bookings', require('./bookings'));
 
 module.exports = router;
