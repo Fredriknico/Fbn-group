@@ -23,10 +23,6 @@ function verifyToken(req, res, next) {
 }
 
 // API  MODULE
-// router.use('/api', verifyToken, require('./api'));
-
-app.get('/', (req, res) => {
-  res.send('An alligator approaches!');
-});
+router.use('/api', verifyToken, require('./api'));
 
 module.exports = router;
