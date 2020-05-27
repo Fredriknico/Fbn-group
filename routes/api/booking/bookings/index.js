@@ -3,7 +3,7 @@ const api = express.Router();
 const selectAll = require('./all');
 const addBooking = require('./insert');
 const deleteBooking = require('./delete');
-const singelBooking = require('./item');
+const singelBooking = require('./customer');
 const updateBooking = require('./updateitem');
 
 // GET ALL ITEMS
@@ -16,7 +16,7 @@ api.use('/add', addBooking);
 api.use('/delete', deleteBooking);
 
 // SELECT ITEM
-api.use('/item', singelBooking);
+api.use('/customer', singelBooking);
 
 // UPDATE ITEM
 api.use('/update', updateBooking);
