@@ -9,6 +9,7 @@ router.get('/:id/:date', (req, res) => {
   db.query(sql, (err, result) => {
     console.log(result);
     if (err) throw err;
+    res.sendStatus(200);
     res.send(result);
   });
 });
