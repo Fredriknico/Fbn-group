@@ -5,7 +5,7 @@ const app = express();
 
 router.post('/', (req, res) => {
   let post = {
-    id: req.body.id,
+    bookingid: req.body.id,
     start: req.body.start,
     eventid: req.body.eventid,
     responsible: req.body.responsible,
